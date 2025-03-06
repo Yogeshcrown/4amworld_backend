@@ -2,10 +2,17 @@ const express = require('express');
 const axios = require('axios');
 const fs = require('fs');
 const cors = require('cors'); // 🔹 Import CORS
-
 const app = express();
+
+
+// ✅ Allow requests from Wix (or any other frontend)
+app.use(cors({
+    origin: '*', // Change this to Wix URL for security
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}));
+
 app.use(express.json()); // Middleware to parse JSON request body
-app.use(cors()); // 🔹 Enable CORS
 
 // Together AI API details
 const API_URL = 'https://api.together.xyz/v1/chat/completions';
