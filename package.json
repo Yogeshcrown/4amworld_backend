@@ -1,0 +1,13 @@
+{
+  "name": "4amworld-backend",
+  "version": "1.0.0",
+  "main": "backend_ai_content.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.3.4",
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "start": "node backend_ai_content.js"
+  }
+}
